@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Vehicles UI</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <script src="./vehicles.js"></script>
+</head>
+<body  onload="App.refreshEnterRoad()">
+  <h1>ToolboothOperator</h1>
+  <h3>TollboothOperator Address: <span class="black"><span id="tbo_address"></span></span></h3>
+  <h3>TollboothOperator Ower: <span class="black"><span id="owner"></span></span></h3>
+  <br>
+  <h1>Vehicles</h1>
+  <br>
+  <h3>Vehicle 1: <span class="black"><span id="vehicle1"></span></span> Balance: <span class="black"><span id="v1_balance"></span></span></h3>
+  <h3>Vehicle 2: <span class="black"><span id="vehicle2"></span></span> Balance: <span class="black"><span id="v2_balance"></span></span></h3>
+  <h3>Tollbooth 1: <span class="black"><span id="tollbooth_1"></span></span></h3>
+  <h3>Tollbooth 2: <span class="black"><span id="tollbooth_2"></span></span></h3>
+  <br><label for="exitSecretClear">Exit Secret Clear:</label><input type="text" id="exitSecretClear" placeholder="e.g., 0x93e66d9baea28c17d9fc393b53e3fbdd76899dae"></input>
+  <br><button id="send" onclick="App.getExitSecretHashed()">Get Secret</button>
+  <h3>Secret: <span class="black"><span id="exitSecretHashed"></span></span></h3>
+  <br>
+    <h1>Enter Road</h1>
+    <br><label for="vehicle">Vehicle:</label><input type="text" id="vehicle" placeholder="e.g., 0x93e66d9baea28c17d9fc393b53e3fbdd76899dae"></input>
+    <br><label for="entry_booth">Entry Tollbooth:</label><input type="text" id="entry_booth" placeholder="e.g., 0x93e66d9baea28c17d9fc393b53e3fbdd76899dae"></input>
+    <br><label for="deposit">Deposit:</label><input type="text" id="deposit" placeholder="e.g., 1"></input>
+    <br><label for="secret">Exit Secret Hashed:</label><input type="text" id="secret" placeholder="e.g., 0x93e66d9baea28c17d9fc393b53e3fbdd76899dae"></input>
+    <br><button id="send" onclick="App.enterRoad()">Set Vehicle's Entry</button>
+    <span id="status"></span>
+  <br>
+  <br><button id="send" onclick="App.refreshEnterRoad()">Get Entry History</button>
+  <br>
+  <table id="myTable">
+    <td>No.</td>
+    <td>Vehicle</td>
+    <td>Entry Booth</td>
+    <td>Deposited Weis</td>
+  </table>
+  <br>
+  <span class="hint"><strong>Hint:</strong> open the browser developer console to view any errors and warnings.</span>
+
+</body>
+</html>

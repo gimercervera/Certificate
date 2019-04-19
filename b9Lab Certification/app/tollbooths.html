@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TollBooths UI</title>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <script src="./tollbooths.js"></script>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="vehicles.html">Vehicles</a></li>
+        </ul>
+    </nav>
+    <h1>Toolbooths</h1>
+    <h3>TollboothOperator Address: <span class="black"><span id="tbo_address"></span></span></h3>
+    <h3>TollboothOperator Ower: <span class="black"><span id="owner"></span></span></h3>
+    <br>
+    <h3>Vehicle 1: <span class="black"><span id="vehicle1"></span></span>
+    Balance: <span class="black"><span id="v1_balance"></span></span></h3>
+    <h3>Vehicle 2: <span class="black"><span id="vehicle2"></span></span>
+    Balance: <span class="black"><span id="v2_balance"></span></span></h3>
+    <br>
+    <h3>Tollbooth 1: <span class="black"><span id="tollbooth_1"></span></span></h3>
+    <h3>Tollbooth 2: <span class="black"><span id="tollbooth_2"></span></span></h3>
+    <br>
+
+    <h1>Report Exit Road</h1>
+    <br><label for="exitBooth">Exit TollBooth:</label><input type="text" id="exitBooth" placeholder="e.g., 0x93e66d9baea28c17d9fc393b53e3fbdd76899dae"></input>
+    <br><label for="exitSecretClear">Exit Secret Clear:</label><input type="text" id="exitSecretClear" placeholder="e.g., 0x93e66d9baea28c17d9fc393b53e3fbdd76899dae"></input>
+    <br><button id="reportExitRoad" onclick="App.reportExitRoad()">Report Exit</button>
+    <span id="status"></span>
+    <br><br>
+    <br><button id="refreshExitRoad" onclick="App.refreshExitRoad()">Check Exit Logs</button>
+    <br><br>
+    <table id="myTable2">
+        <td>No.</td>
+        <td>Exit Secret Hashed</td>
+        <td>Exit Booth</td>
+        <td>Final Fee</td>
+        <td>Refund Weis</td>
+    </table>
+    <br>
+    <span class="hint"><strong>Hint:</strong> open the browser developer console to view any errors and warnings.</span>
+</body>
+
+
+
+</html>
